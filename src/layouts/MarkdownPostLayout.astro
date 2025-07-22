@@ -19,6 +19,13 @@ const { frontmatter } = Astro.props;
       align-items: center;
       gap: 0.5rem;
     }
+
+    .post-content {
+      background-color: rgb(212, 212, 212);
+      padding: 1rem;
+      border-radius: 1rem;
+      margin: 1rem 0;
+    }
   </style>
   <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
   <p><em>{frontmatter.description}</em></p>
@@ -27,5 +34,7 @@ const { frontmatter } = Astro.props;
   <div class="tag-container">
     Tags: {frontmatter.tags.map((tag: string) => <p class="tag">{tag}</p>)}
   </div>
-  <slot />
+  <div class="post-content">
+    <slot />
+  </div>
 </BaseLayout>
