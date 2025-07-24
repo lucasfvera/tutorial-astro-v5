@@ -80,3 +80,20 @@ h1 {
     display: none;
   }
 }
+
+html.dark {
+  background-color: #0d0950;
+  color: #fff;
+}
+
+.dark .nav-links a {
+  color: #fff;
+}
+
+.post-content {
+  background-color: rgb(212, 212, 212);
+}
+
+.dark .post-content {
+  background-color: #202020;
+}
